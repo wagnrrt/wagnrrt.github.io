@@ -23,7 +23,7 @@ function App() {
           <div className="flex flex-col gap-6">
 
             <div className="flex gap-6">
-              <div className="w-0.5 bg-accent shrink-0"></div>
+              <hr className="w-0.5 bg-accent shrink-0 border" />
 
               <div className="flex flex-col gap-3">
                 <h1 className="text-2xl md:text-5xl">
@@ -84,6 +84,14 @@ function App() {
                 projects that truly matter.
               </p>
             </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-4 m-20 space-x-8">
+          <div className="border border-white/10 p-4">
+            <h1 className="text-accent font-semibold">
+              LANGUAGES
+            </h1>
           </div>
         </div>
       </section>
