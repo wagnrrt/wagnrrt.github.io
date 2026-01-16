@@ -5,12 +5,11 @@
 
 @theme {
   --color-accent: oklch(82.68% 0.108 306.38);
-  --font-sans: system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 }
 
 :root {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   line-height: 1.5;
   font-weight: 400;
 

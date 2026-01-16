@@ -33,10 +33,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-accent transition-all group-hover:w-full"></span>
             </li>
             <li className="group relative">
-              <a href="#_skills" className="text-sm text-gray-400 group-hover:text-accent transition-colors relative group">_skills</a>
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-accent transition-all group-hover:w-full"></span>
-            </li>
-            <li className="group relative">
               <a href="#projects" className="text-sm text-gray-400 group-hover:text-accent transition-colors relative group">_projects</a>
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-accent transition-all group-hover:w-full"></span>
             </li>
