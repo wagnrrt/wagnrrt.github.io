@@ -1,6 +1,6 @@
 import { ChevronDown, Code2, Github, Linkedin, Mail, Terminal, User } from "lucide-react"
 
-function App() {
+export default function Home() {
 
   const skillsCard = [
     {
@@ -92,14 +92,14 @@ function App() {
           <span>about_me<span className="text-accent">.json</span></span>
         </div>
 
-        <div className="bg-neutral-800/30 flex flex-col m-20 p-4 border border-white/10 gap-8">
+        <div className="bg-neutral-800/30 flex flex-col xl:m-20 my-20 p-4 border border-white/10 gap-8">
           <div className="flex gap-2">
             <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
             <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
             <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
           </div>
 
-          <div className="px-6 leading-relaxed font-mono">
+          <div className="md:px-6 px-3 leading-relaxed font-mono">
             <h1 className="text-accent">
               wagnrrt/ ~ &gt; <span className="text-gray-300"> cat dev_profile.txt</span>
             </h1>
@@ -122,17 +122,17 @@ function App() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 mx-30 space-x-8">
-          {skillsCard.map((data) =>
-            <div className="border border-white/10 hover:border-accent/40 p-4 space-y-3 group duration-300">
+        <div className="grid md:grid-cols-3 xl:mx-30 gap-10">
+          {skillsCard.map((data, index) =>
+            <div key={index} className="border border-white/10 hover:border-accent/40 p-4 space-y-3 group duration-300">
               <h1 className="text-accent font-semibold">
                 {data.title}
               </h1>
               <div className="h-px bg-white/5 shrink-0"></div>
 
               <div className="flex flex-col gap-4 text-sm">
-                {data.items.map((item) =>
-                  <p className="text-gray-400 group-hover:text-white duration-300">
+                {data.items.map((item, itemIndex) =>
+                  <p key={itemIndex} className="text-gray-400 group-hover:text-white duration-300">
                     <span className="text-accent/40">&gt;</span> {item}
                   </p>
                 )}
@@ -148,9 +148,9 @@ function App() {
           <span>projects<span className="text-accent">/</span></span>
         </div>
 
-        <div className="grid grid-cols-2 mx-30 my-20 space-x-8">
-          {projectsCard.map((data) =>
-            <div className="border border-white/10 hover:border-white/15 p-6 space-y-5 duration-300 group">
+        <div className="grid md:grid-cols-2 xl:mx-30 my-20 gap-10">
+          {projectsCard.map((data, index) =>
+            <div key={index} className="border border-white/10 hover:border-white/15 p-6 space-y-5 duration-300 group">
               <div className="flex justify-between">
                 <h1 className="group-hover:text-accent duration-300 font-semibold text-xl">
                   {data.title}
@@ -174,9 +174,9 @@ function App() {
                 </p>
               </div>
 
-              <div className="flex gap-2">
-                {data.tags.map((item) =>
-                  <div className="bg-white/5 text-gray-500 text-xs px-2 py-1">
+              <div className="flex gap-2 flex-wrap">
+                {data.tags.map((item, itemIndex) =>
+                  <div key={itemIndex} className="bg-white/5 text-gray-500 text-xs px-2 py-1">
                     {item}
                   </div>
                 )}
@@ -186,13 +186,13 @@ function App() {
         </div>
       </section>
 
-      <footer className="my-20 flex-1 flex flex-col" id="contact">
+      <footer className=" flex-1 flex flex-col" id="contact">
         <div className="flex gap-3 text-xl">
           <User className="text-accent" />
           <span>contact<span className="text-accent">()</span></span>
         </div>
 
-        <div className="flex mx-30 my-20 justify-between">
+        <div className="flex flex-col gap-10 md:gap-0 md:flex-row xl:mx-30 my-20 justify-between">
           <div className="flex flex-col">
             <p className="text-gray-400 text-sm leading-relaxed">
               Building my path as a developer. <br /> Open to opportunities, collaborations, <br /> and knowledge exchange.
@@ -201,7 +201,7 @@ function App() {
 
           <div className="space-y-3">
             <a
-              className="flex gap-3 text-sm items-center"
+              className="flex gap-3 text-sm items-center text-gray-400 hover:text-white"
               onClick={(e) => {
                 e.preventDefault();
                 const user = 'wagnrb0';
@@ -215,12 +215,12 @@ function App() {
                 wagnrb0{String.fromCharCode(64)}gmail.com
               </span>
             </a>
-            <a className="flex gap-3 text-sm items-center" href="https://github.com/wagnrrt" ><Github size={18} /> https://github.com/wagnrrt</a>
-            <a className="flex gap-3 text-sm items-center" href="https://linkedin.com/in/wagnrrt"><Linkedin size={18} /> https://linkedin.com/in/wagnrrt</a>
+            <a className="flex gap-3 text-sm items-center text-gray-400 hover:text-white" href="https://github.com/wagnrrt" ><Github size={18} /> https://github.com/wagnrrt</a>
+            <a className="flex gap-3 text-sm items-center text-gray-400 hover:text-white" href="https://linkedin.com/in/wagnrrt"><Linkedin size={18} /> https://linkedin.com/in/wagnrrt</a>
           </div>
         </div>
       </footer>
+
     </div>
   )
 }
-export default App
