@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState, useRef } from "react";
+import i18n from "../../i18n";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
