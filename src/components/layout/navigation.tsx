@@ -1,12 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState, useRef } from "react";
-import { useTranslation } from 'react-i18next';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
