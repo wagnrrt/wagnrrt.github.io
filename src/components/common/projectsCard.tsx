@@ -1,7 +1,10 @@
 import { Github } from "lucide-react";
 import { projectsCard } from "../../data/projects";
+import { useTranslation } from 'react-i18next';
 
 function ProjectsPreviewCard() {
+  const { t } = useTranslation();
+
   return (
     <div className="grid md:grid-cols-2 xl:mx-30 my-20 gap-10">
       {projectsCard.map((data, index) =>
@@ -25,7 +28,7 @@ function ProjectsPreviewCard() {
 
           <div className="flex flex-col gap-4 text-sm">
             <p className="text-gray-400">
-              {data.desc}
+              {t(data.desc)}
             </p>
           </div>
 
@@ -43,6 +46,7 @@ function ProjectsPreviewCard() {
 }
 
 function ProjectsCard() {
+  const { t } = useTranslation();
   return (
     <div className="grid sm:grid-cols-2 xl:mx-30 my-20 gap-10">
       {projectsCard.map((data, index) =>
@@ -66,7 +70,7 @@ function ProjectsCard() {
 
           <div className="flex flex-col gap-4 text-sm">
             <p className="text-gray-400">
-              {data.desc}
+              {t(data.desc)}
             </p>
           </div>
 

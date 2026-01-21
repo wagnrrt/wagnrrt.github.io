@@ -1,6 +1,9 @@
 import { Github, Linkedin, Mail, User } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function Contact() {
+  const { t } = useTranslation();
+
   return (
     <section className=" flex-1 flex flex-col" id="contact">
       <div className="flex gap-3 text-xl">
@@ -10,8 +13,8 @@ export function Contact() {
 
       <div className="flex flex-col gap-10 md:gap-0 md:flex-row xl:mx-30 my-20 justify-between">
         <div className="flex flex-col">
-          <p className="text-gray-400 text-sm leading-relaxed">
-            Building my path as a developer. <br /> Open to opportunities, collaborations, <br /> and knowledge exchange.
+          <p className="text-gray-400 text-sm leading-relaxed whitespace-pre-line">
+            {t('contact')}
           </p>
         </div>
 

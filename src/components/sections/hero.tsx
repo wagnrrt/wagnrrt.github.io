@@ -1,6 +1,8 @@
 import { ChevronDown } from "lucide-react"
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
 
   return (
     <main className="flex-1 flex flex-col justify-between min-h-screen py-10 md:py-30">
@@ -27,13 +29,14 @@ export default function Hero() {
 
             <div className="flex flex-col gap-3">
               <h1 className="text-2xl md:text-5xl">
-                Hi, my name is Wagner
+                {t('hero.greeting')}
               </h1>
               <h2 className="md:text-lg">
-                and I'm a <span className="text-accent">Backend developer<span className="animate-pulse">_</span></span>
+                {t('hero.role')}
+                <span className="text-accent"> Backend developer<span className="animate-pulse">_</span></span>
               </h2>
-              <p className="text-gray-400 text-sm md:text-base">
-                Passionate about programming and always<br /> eager to explore new technologies and <br /> expand my skills.
+              <p className="text-gray-400 text-sm md:text-base whitespace-pre-line">
+                {t('hero.desc')}
               </p>
             </div>
           </div>

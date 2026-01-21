@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next';
+
 function Terminal() {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-neutral-800/30 flex flex-col p-4 border border-white/10 gap-8 col-span-3">
       <div className="flex gap-2">
@@ -13,24 +17,16 @@ function Terminal() {
         </h1>
         <div className="my-6 text-gray-300 space-y-6">
           <p>
-            I’m currently studying back-end development, focusing on Node.js, JavaScript,
-            and TypeScript. My main interest is understanding how applications work behind
-            the scenes — from data handling to the logic that connects everything.
+            {t('about.terminal.p1')}
           </p>
           <p>
-
-            Programming is something I genuinely enjoy. I like exploring how systems are
-            structured, understanding why certain decisions are made, and paying attention
-            to the details that influence how software behaves.
+            {t('about.terminal.p2')}
           </p>
           <p>
-            At this stage, my focus is on building strong fundamentals. I’m improving my
-            coding skills, deepening my understanding of back-end concepts, and learning
-            through consistent practice and study.
+            {t('about.terminal.p3')}
           </p>
           <p>
-            My goal is steady technical growth, developing a solid mindset for building
-            reliable systems and writing better code over time.
+            {t('about.terminal.p4')}
           </p>
         </div>
       </div>
@@ -39,6 +35,8 @@ function Terminal() {
 }
 
 function TerminalPreview() {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-neutral-800/30 flex flex-col xl:m-20 my-20 p-4 border border-white/10 gap-8">
       <div className="flex gap-2">
@@ -53,18 +51,13 @@ function TerminalPreview() {
         </h1>
         <div className="my-6 text-gray-300 space-y-6">
           <p>
-            Back-end developer focused on Node.js, JavaScript, and TypeScript.
-            I build the logic and architecture that powers applications,
-            ensuring everything runs solidly.
+            {t('about.terminalPreview.p1')}
           </p>
           <p>
-            I'm genuinely passionate about programming. I enjoy understanding
-            how systems work under the hood — the data flow, the structure,
-            the details that make a difference. The more I learn, the more I want to explore.
+            {t('about.terminalPreview.p2')}
           </p>
           <p>
-            Always looking to evolve technically and apply what I learn to
-            projects that truly matter.
+            {t('about.terminalPreview.p3')}
           </p>
         </div>
       </div>
